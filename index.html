@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xplore Estate 2026 – La Scuola degli Eroi</title>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  /* ─── WordPress global presets (allineati al tuo theme) ─── */
+  :root {
+    --wp--preset--aspect-ratio--square: 1;
+    --wp--preset--aspect-ratio--4-3: 4/3;
+    --wp--preset--aspect-ratio--3-4: 3/4;
+    --wp--preset--aspect-ratio--3-2: 3/2;
+    --wp--preset--aspect-ratio--2-3: 2/3;
+    --wp--preset--aspect-ratio--16-9: 16/9;
+    --wp--preset--aspect-ratio--9-16: 9/16;
+    --wp--preset--color--black: #000000;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fbc000;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+    --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);
+    --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);
+    --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(251,192,0) 0%,rgb(255,112,158) 100%);
+    --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);
+    --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);
+    --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);
+    --wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);
+    --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);
+    --wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);
+    --wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);
+    --wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);
+    --wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);
+    --wp--preset--font-size--small: 13px;
+    --wp--preset--font-size--medium: 20px;
+    --wp--preset--font-size--large: 36px;
+    --wp--preset--font-size--x-large: 42px;
+    --wp--preset--spacing--20: 0.44rem;
+    --wp--preset--spacing--30: 0.67rem;
+    --wp--preset--spacing--40: 1rem;
+    --wp--preset--spacing--50: 1.5rem;
+    --wp--preset--spacing--60: 2.25rem;
+    --wp--preset--spacing--70: 3.38rem;
+    --wp--preset--spacing--80: 5.06rem;
+    --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+    --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+    --wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);
+    --wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);
+    /*
+     * Colori Site Kit Elementor (xploreparkour.it — .elementor-kit-4 in post-4.css):
+     * primary #FBC000 | secondary #FF709E | text #00EBFF | accent #61CE70
+     * grafite #313638 | bianco #FFFFFF | nero #000000
+     */
+    --xplore-primary: #fbc000;
+    --xplore-secondary: #ff709e;
+    --xplore-cyan: #00ebff;
+    --xplore-green: #61ce70;
+    --xplore-graphite: #313638;
+    /* Token pagina (allineati al kit sopra) */
+    --x-font: "Exo", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --x-ink: #000000;
+    --x-surface: #121415;
+    --x-elevated: var(--xplore-graphite);
+    --x-accent: var(--xplore-primary);
+    --x-accent-2: var(--xplore-secondary);
+    --x-text: var(--wp--preset--color--white);
+    --x-text-soft: rgba(255, 255, 255, 0.72);
+    --x-text-muted: rgba(171, 184, 195, 0.85);
+    --x-light-bg: #f0f2f5;
+    --x-text-dark: #1a1a1a;
+    /* Bande pagina (bianco / grigino, senza nero pieno) */
+    --x-band-white: #ffffff;
+    --x-band-gray: #eceef1;
+    --x-band-gray-deep: #e3e6eb;
+    --x-card-tint: #f6f7f9;
+    --x-footer-bg: #dde2e8;
+    --x-featured-card: #3d454d;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--x-band-gray);
+    color: var(--x-text-dark);
+    font-family: var(--x-font);
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  .nav-logo {
+    font-family: var(--x-font); font-weight: 800; letter-spacing: 0.02em;
+    font-size: 1.65rem;
+    letter-spacing: 0.06em;
+    color: var(--x-accent);
+    text-decoration: none;
+  }
+  .nav-logo span { color: #4a5056; font-weight: 600; }
+  .nav-cta {
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    font-weight: 700;
+    font-size: .85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: .65rem 1.6rem;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: filter .2s, transform .2s;
+  }
+  .nav-cta:hover { filter: brightness(0.95); transform: translateY(-1px); }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 8rem 4rem 6rem;
+    overflow: hidden;
+    color: #ffffff;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background-color: #0d0f0c;
+    background-image:
+      linear-gradient(110deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.38) 45%, rgba(0, 0, 0, 0.52) 100%),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.15) 38%, rgba(0, 0, 0, 0.88) 100%),
+      url('assets/hero-estate-camp.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .hero h1 {
+    position: relative; z-index: 1;
+    font-family: var(--x-font);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: clamp(4.5rem, 12vw, 10rem);
+    line-height: .9;
+    letter-spacing: 3px;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.85));
+  }
+  .hero h1 .yellow {
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero h1 .italic {
+    font-family: var(--x-font);
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    color: var(--x-text);
+    display: block;
+    letter-spacing: 0;
+  }
+  .hero-sub {
+    position: relative; z-index: 1;
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 520px;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.85);
+  }
+  .hero-meta {
+    position: relative; z-index: 1;
+    display: flex; flex-wrap: wrap; gap: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  .hero-meta-item {
+    display: flex; align-items: center; gap: .55rem;
+    font-size: .92rem; font-weight: 600; color: var(--x-text);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    padding: .55rem 1.1rem;
+    border-radius: 2px;
+  }
+  .hero-meta-item .icon { font-size: 1.1rem; }
+  .hero-actions {
+    position: relative; z-index: 1;
+    display: flex; flex-wrap: wrap; gap: 1rem;
+    align-items: center;
+  }
+  .btn-primary {
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    font-family: var(--x-font);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 1rem 2.4rem;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .25s;
+    border: 2px solid var(--x-accent);
+  }
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--x-accent);
+    border-color: var(--x-accent);
+    transform: translateY(-2px);
+  }
+  .btn-secondary {
+    color: var(--x-text-dark);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: .6rem;
+    border-bottom: 2px solid var(--x-accent);
+    padding: .4rem 0;
+    transition: all .2s;
+  }
+  .btn-secondary:hover { color: var(--x-accent); gap: 1rem; }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    z-index: 1;
+    display: flex; flex-direction: column; align-items: center; gap: .4rem;
+    opacity: .65;
+    color: rgba(255, 255, 255, 0.85);
+    animation: bounce 2s infinite;
+  }
+  .hero-scroll span { font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; }
+  .hero-scroll .arrow { font-size: 1.2rem; }
+  @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+  .hero .btn-secondary {
+    color: rgba(255, 255, 255, 0.95);
+    border-bottom-color: var(--x-accent);
+  }
+  .hero .btn-secondary:hover {
+    color: #ffffff;
+  }
+
+  /* ─── SECTION BASE ─── */
+  section { padding: 6rem 4rem; }
+  .section-label {
+    display: inline-block;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--x-accent);
+    margin-bottom: 1rem;
+  }
+  .section-title {
+    font-family: var(--x-font); font-weight: 800; letter-spacing: 0.04em;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    color: var(--x-text-dark);
+  }
+  .section-title .italic {
+    font-family: var(--x-font);
+    font-style: italic;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+  }
+  .max-w { max-width: 1200px; margin: 0 auto; }
+
+  /* ─── MISSION (grigino) ─── */
+  .mission {
+    background: var(--x-band-gray);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .mission-text .lead {
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+    line-height: 1.7;
+    color: rgba(26, 26, 26, 0.82);
+    margin-bottom: 1.8rem;
+  }
+  .mission-text .lead strong { color: var(--x-accent); font-weight: 700; }
+  .mission-pillars {
+    display: flex; flex-direction: column; gap: 1rem;
+    margin-top: 2rem;
+  }
+  .pillar {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    background: rgba(251, 192, 0, 0.1);
+    border-left: 3px solid var(--x-accent);
+    border-radius: 0 2px 2px 0;
+    transition: background .2s;
+  }
+  .pillar:hover { background: rgba(251, 192, 0, 0.16); }
+  .pillar-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: .1rem; }
+  .pillar h4 { font-size: 1rem; font-weight: 700; margin-bottom: .2rem; color: #1a1a1a; }
+  .pillar p { font-size: .9rem; color: rgba(26, 26, 26, 0.68); line-height: 1.5; }
+
+  /* ─── PROGRAMMA (fascia bianca + blocchi chiari) ─── */
+  .programma {
+    background: var(--x-band-gray-deep);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .programma .section-label {
+    color: var(--wp--preset--color--luminous-vivid-orange);
+  }
+  .programma .section-title {
+    color: var(--x-ink);
+  }
+  .programma .section-title .italic {
+    color: #242424;
+  }
+  .programma-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+  .programma-intro p {
+    color: rgba(26, 26, 26, 0.68);
+    font-size: 1.1rem;
+    line-height: 1.65;
+  }
+  .programma .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .programma .activity-card {
+    background: var(--x-band-white);
+    padding: 2.4rem 2rem;
+    transition: background .25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .programma .activity-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--x-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .programma .activity-card:hover {
+    background: #f4f4f4;
+  }
+  .programma .activity-card:hover::after { transform: scaleX(1); }
+  .programma .activity-emoji { font-size: 2.5rem; margin-bottom: 1.2rem; display: block; }
+  .programma .activity-card h3 {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    color: var(--x-accent);
+    margin-bottom: .6rem;
+  }
+  .programma .activity-card p {
+    font-size: .95rem;
+    color: rgba(26, 26, 26, 0.72);
+    line-height: 1.6;
+  }
+  .programma .activity-tag {
+    display: inline-block;
+    background: rgba(251, 192, 0, 0.18);
+    color: #8a6500;
+    font-size: .72rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: .25rem .7rem;
+    border-radius: 2px;
+    margin-top: 1rem;
+  }
+  .programma .activity-tag--highlight {
+    background: rgba(255, 112, 158, 0.2);
+    color: #c73d74;
+  }
+
+  .text-accent { color: var(--x-accent); }
+
+  /* ─── PREZZI (banda grigio chiaro, dopo bianco programma) ─── */
+  .prezzi {
+    background: linear-gradient(180deg, #e8eef3 0%, #dde5ec 100%);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .prezzi .section-label { color: var(--wp--preset--color--luminous-vivid-orange); }
+  .prezzi .section-title { color: var(--x-text-dark); }
+  .prezzi-subtitle {
+    font-size: 1.05rem;
+    color: rgba(26, 26, 26, 0.62);
+    margin-bottom: 3.5rem;
+    max-width: 600px;
+  }
+  .prezzi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .price-card {
+    background: var(--wp--preset--color--white);
+    border-radius: 4px;
+    padding: 2.4rem 2rem;
+    border: 2px solid transparent;
+    transition: all .25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .price-card:hover {
+    border-color: var(--x-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--wp--preset--shadow--deep);
+  }
+  .price-card.featured {
+    background: var(--x-featured-card);
+    color: var(--x-text);
+    border-color: var(--x-accent);
+  }
+  .price-card.featured .price-desc { color: var(--x-text-soft); }
+  .price-card.featured .price-tag { color: rgba(255, 255, 255, 0.72); }
+  .price-best {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    font-size: .7rem; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: .3rem .7rem;
+    border-radius: 2px;
+  }
+  .price-label {
+    font-size: .75rem; font-weight: 700; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--wp--preset--color--luminous-vivid-orange);
+    margin-bottom: .8rem;
+  }
+  .price-card.featured .price-label { color: var(--x-accent); }
+  .price-number {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 4.5rem;
+    line-height: 1;
+    color: var(--x-text-dark);
+    margin-bottom: .3rem;
+  }
+  .price-card.featured .price-number { color: var(--x-accent); }
+  .price-tag {
+    font-size: .85rem;
+    background: rgba(17,17,17,.07);
+    padding: .25rem .7rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+  }
+  .price-desc {
+    font-size: .92rem;
+    color: rgba(17,17,17,.6);
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+  }
+  .price-cta {
+    width: 100%;
+    padding: .9rem;
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    font-weight: 800;
+    font-size: .9rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: var(--x-font);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  .price-cta:hover {
+    background: transparent;
+    color: var(--x-accent);
+    border-color: var(--x-accent);
+  }
+  .price-card.featured .price-cta {
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+  }
+  .price-card.featured .price-cta:hover {
+    background: transparent;
+    color: var(--x-accent);
+    border-color: var(--x-accent);
+  }
+
+  /* incluso / non incluso */
+  .inclusi-wrapper {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    background: var(--wp--preset--color--white);
+    border-radius: 4px;
+    padding: 2.5rem;
+    border: 1px solid rgba(0,0,0,.08);
+  }
+  .inclusi-col h4 {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: .5rem;
+  }
+  .inclusi-col.yes h4 { color: var(--xplore-green); }
+  .inclusi-col.no h4 { color: var(--wp--preset--color--vivid-red); }
+  .inclusi-col ul { list-style: none; }
+  .inclusi-col ul li {
+    font-size: .95rem;
+    color: rgba(17,17,17,.75);
+    padding: .55rem 0;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+    display: flex; align-items: center; gap: .7rem;
+  }
+  .inclusi-col ul li:last-child { border-bottom: none; }
+  .inclusi-col ul li .check { color: var(--xplore-green); font-size: 1rem; }
+  .inclusi-col ul li .cross { color: var(--wp--preset--color--vivid-red); font-size: 1rem; }
+
+  /* ─── SICUREZZA (bianco) ─── */
+  .sicurezza {
+    background: var(--x-band-white);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .sicurezza-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+  }
+  .myth-box {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    position: relative;
+  }
+  .myth-q {
+    font-family: var(--x-font);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  .myth-q::before { content: '"'; font-size: 3rem; color: var(--x-accent); opacity: .45; line-height: 0; vertical-align: -.5rem; margin-right: .3rem; }
+  .myth-a {
+    font-size: 1rem; line-height: 1.65; color: rgba(26, 26, 26, 0.82);
+  }
+  .myth-a strong { color: var(--x-accent); }
+  .stats-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat-block {
+    background: rgba(251, 192, 0, 0.12);
+    border: 1px solid rgba(251, 192, 0, 0.28);
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .stat-block .num {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 3rem; color: var(--x-accent); line-height: 1;
+    display: block;
+  }
+  .stat-block .lbl { font-size: .8rem; color: rgba(0, 0, 0, 0.52); letter-spacing: 1px; margin-top: .3rem; }
+
+  .staff-cards { display: flex; flex-direction: column; gap: 0; }
+  .staff-intro {
+    font-size: 1.05rem; line-height: 1.65; color: rgba(26, 26, 26, 0.75);
+    margin-bottom: 1.5rem;
+  }
+  .staff-card {
+    display: flex; align-items: center; gap: 1.2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0;
+    padding: 1rem 0;
+    transition: border-color .2s;
+  }
+  .staff-card:last-child { border-bottom: none; }
+  .staff-card:hover { border-color: rgba(251, 192, 0, 0.45); }
+  .staff-avatar {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--x-accent);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 1.4rem;
+    color: var(--x-ink);
+    flex-shrink: 0;
+  }
+  .staff-card h5 { font-size: .95rem; font-weight: 700; margin-bottom: .15rem; }
+  .staff-card p { font-size: .82rem; color: rgba(0, 0, 0, 0.52); }
+
+  .sicurezza-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-title--sicurezza {
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: none;
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 0;
+    color: var(--x-text-dark);
+  }
+  .section-title--sicurezza .italic {
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: inherit;
+    text-transform: none;
+  }
+  .sicurezza-map-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #e8e8e6;
+  }
+  .sicurezza-map-wrap iframe {
+    width: 100%;
+    height: min(360px, 58vw);
+    display: block;
+    border: 0;
+  }
+  .sicurezza-map-attrib {
+    font-size: .68rem;
+    color: rgba(0, 0, 0, 0.48);
+    padding: .45rem .85rem .55rem;
+    margin: 0;
+    line-height: 1.45;
+    background: rgba(0, 0, 0, 0.04);
+  }
+  .sicurezza-map-attrib a { color: inherit; text-decoration: underline; }
+  .sicurezza-loc-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: flex-start;
+  }
+  .sicurezza-loc-hint {
+    font-size: .9rem;
+    line-height: 1.6;
+    color: rgba(26, 26, 26, 0.72);
+    margin: 0;
+  }
+
+  /* ─── TESTIMONIALS (bianco, prima dei prezzi) ─── */
+  .testimonials {
+    background: var(--x-band-white);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .test-intro { text-align: center; max-width: 600px; margin: 0 auto 2.5rem; }
+  .test-intro p { color: rgba(26, 26, 26, 0.62); font-size: 1.05rem; line-height: 1.6; }
+
+  .test-carousel-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .test-carousel-hint {
+    text-align: center;
+    font-size: 0.78rem;
+    color: rgba(0, 0, 0, 0.48);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+  .test-carousel-hint--mobile { display: none; }
+  .test-carousel {
+    display: flex;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .test-carousel-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    align-self: center;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.14);
+    background: var(--x-band-white);
+    color: var(--x-text-dark);
+    font-size: 1.65rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s, opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .test-carousel-btn span { position: relative; top: -1px; }
+  .test-carousel-btn:hover:not(:disabled) {
+    border-color: var(--x-accent);
+    color: #9a7200;
+  }
+  .test-carousel-btn:disabled {
+    opacity: 0.32;
+    cursor: not-allowed;
+  }
+  .test-carousel-viewport {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.03);
+    outline: none;
+    scrollbar-width: none;
+  }
+  .test-carousel-viewport::-webkit-scrollbar { display: none; }
+  .test-carousel-viewport:focus-visible {
+    box-shadow: 0 0 0 2px rgba(251, 192, 0, 0.55);
+  }
+  .test-carousel-viewport .test-card {
+    scroll-snap-align: start;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: clamp(240px, 42vh, 320px);
+    display: flex;
+    flex-direction: column;
+  }
+  .test-carousel-viewport .test-card .test-author { margin-top: auto; }
+  .test-card {
+    background: var(--x-band-gray);
+    border-radius: 4px;
+    padding: 1.5rem 1.5rem 1.35rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+  .test-card:hover {
+    border-color: rgba(251, 192, 0, 0.45);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  }
+  .test-stars { color: var(--x-accent); font-size: 1.05rem; margin-bottom: 1.2rem; letter-spacing: 2px; }
+  .test-text {
+    font-family: var(--x-font);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: rgba(26, 26, 26, 0.85);
+    margin-bottom: 1.5rem;
+  }
+  .test-text::before { content: '"'; color: var(--x-accent); }
+  .test-text::after { content: '"'; color: var(--x-accent); }
+  .test-author {
+    font-size: .8rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: rgba(0, 0, 0, 0.45);
+  }
+  .test-author span { color: #9a7200; }
+
+  /* ─── FINAL CTA ─── */
+  .final-cta {
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    padding: 6rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: 'XPLORE';
+    position: absolute;
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 18vw;
+    color: rgba(0,0,0,.05);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .final-cta .section-label { color: rgba(0,0,0,.5); }
+  .final-cta .section-title { color: var(--x-ink); margin-bottom: 1rem; }
+  .final-cta p { font-size: 1.1rem; color: rgba(0,0,0,.65); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.65; }
+  .btn-dark {
+    background: #2f353c;
+    color: #ffffff;
+    font-family: var(--x-font);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 1.1rem 2.8rem;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .25s;
+    border: 2px solid #2f353c;
+    position: relative;
+  }
+  .btn-dark:hover { background: transparent; color: #2f353c; border-color: #2f353c; }
+  .final-cta-note {
+    margin-top: 1.5rem;
+    font-size: .85rem;
+    color: rgba(0,0,0,.45);
+    position: relative;
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--x-footer-bg);
+    padding: 2.5rem 4rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  footer .logo { font-family: var(--x-font); font-weight: 900; letter-spacing: 1px; font-size: 1.5rem; color: var(--x-accent); }
+  footer .logo span { color: rgba(0, 0, 0, 0.45); }
+  footer p { font-size: .8rem; color: rgba(0, 0, 0, 0.5); }
+
+  /* ─── VS (bianco, colonne a contrasto leggero) ─── */
+  .vs {
+    background: var(--x-band-white);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .vs-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; }
+  .vs-col { padding: 3rem 2.5rem; }
+  .vs-col.trad { background: var(--x-card-tint); }
+  .vs-col.xplore { background: rgba(251, 192, 0, 0.1); }
+  .vs-col h3 {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 1.4rem; letter-spacing: 2px;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+  }
+  .vs-col.trad h3 { color: rgba(0, 0, 0, 0.42); border-color: rgba(0, 0, 0, 0.1); }
+  .vs-col.xplore h3 { color: #b88600; border-color: rgba(251, 192, 0, 0.45); }
+  .vs-item {
+    display: flex; align-items: flex-start; gap: .8rem;
+    margin-bottom: 1.4rem;
+    font-size: .95rem; line-height: 1.5;
+  }
+  .vs-col.trad .vs-item { color: rgba(0, 0, 0, 0.58); }
+  .vs-col.xplore .vs-item { color: rgba(26, 26, 26, 0.88); }
+  .vs-item .icon { flex-shrink: 0; margin-top: .1rem; }
+  .vs-divider {
+    display: flex; align-items: center; justify-content: center;
+    padding: 0 1rem;
+    position: relative;
+    background: var(--x-band-white);
+  }
+  .vs-divider::before {
+    content: '';
+    position: absolute; top: 0; bottom: 0; left: 50%;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .vs-badge {
+    width: 52px; height: 52px;
+    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
+    color: var(--x-ink);
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; z-index: 1;
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 520px) {
+    .programma .activities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 768px) {
+    .test-carousel-btn {
+      display: none;
+    }
+    .test-carousel {
+      gap: 0;
+    }
+    .test-carousel-hint--desktop {
+      display: none;
+    }
+    .test-carousel-hint--mobile {
+      display: block;
+    }
+  }
+  @media (max-width: 900px) {
+    nav { padding: 1rem 1.5rem; }
+    section { padding: 4rem 1.5rem; }
+    .hero { padding: 7rem 1.5rem 5rem; }
+    .mission-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .sicurezza-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .vs-grid { grid-template-columns: 1fr; }
+    .vs-divider { display: none; }
+    .inclusi-wrapper { grid-template-columns: 1fr; }
+    footer { padding: 2rem 1.5rem; }
+    .test-carousel-viewport .test-card {
+      min-height: clamp(220px, 48vh, 300px);
+    }
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero h1 { animation: fadeUp .7s ease both; animation-delay: .15s; }
+  .hero-sub { animation: fadeUp .7s ease both; animation-delay: .35s; }
+  .hero-meta { animation: fadeUp .7s ease both; animation-delay: .45s; }
+  .hero-actions { animation: fadeUp .7s ease both; animation-delay: .55s; }
+
+  /* Allineamento tipografico con blocchi WP (pullquote) */
+  :root :where(.wp-block-pullquote) {
+    font-size: 1.5em;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <a href="#" class="nav-logo">XPLORE <span>PARKOUR</span></a>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <h1>
+    XPLORE<br>
+    <span class="yellow">ESTATE</span><br>
+    <span class="italic">2026</span>
+  </h1>
+  <p class="hero-sub">Non un semplice centro estivo. Un'avventura per scoprire il mondo e il proprio corpo.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="icon">📍</span> Parco Sandro Pertini, Rimini</div>
+    <div class="hero-meta-item"><span class="icon">📅</span> 15 Giugno – 31 Luglio 2026</div>
+    <div class="hero-meta-item"><span class="icon">👦</span> Ragazzi dai 6 ai 14 anni</div>
+  </div>
+  <div class="hero-actions">
+    <a href="#programma" class="btn-secondary">Scopri il programma ↓</a>
+  </div>
+  <div class="hero-scroll"><span>Scorri</span><span class="arrow">↓</span></div>
+</section>
+
+<!-- ─── MISSION ─── -->
+<section class="mission">
+  <div class="max-w">
+    <div class="mission-grid">
+      <div class="mission-text">
+        <span class="section-label">La nostra missione</span>
+        <h2 class="section-title">Cos'ha di speciale<br><span class="italic">centro estivo Xplore</span></h2>
+        <p class="lead">Il nostro obiettivo per quest'estate va ben oltre il semplice movimento: vogliamo accompagnare i ragazzi in un percorso per imparare a collaborare, prendere totale fiducia nelle proprie capacità, superare le paure e vivere appieno la natura.</p>
+        <p class="lead">La nostra vera missione è accendere la loro curiosità, aiutarli a superare i propri limiti mentali ancor prima che fisici e forgiare «persone incredibili» in un ambiente dove il divertimento è la regola d'oro.</p>
+        <div class="mission-pillars">
+          <div class="pillar">
+            <span class="pillar-icon">🧗</span>
+            <div>
+              <h4>Movimento come linguaggio</h4>
+              <p>Qui si impara a muoversi e a cadere bene attraverso il gioco, in un ambiente sicuro e divertente.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🤝</span>
+            <div>
+              <h4>Community</h4>
+              <p>Niente classifiche, niente "migliore". Il gruppo cresce insieme, ognuno al proprio ritmo.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-icon">🧠</span>
+            <div>
+              <h4>Corpo e mente, insieme</h4>
+              <p>Alleniamo il corpo per liberare la mente. Il movimento è lo strumento, la trasformazione l'obiettivo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROGRAMMA ─── -->
+<section class="programma" id="programma">
+  <div class="max-w">
+    <div class="programma-intro">
+      <span class="section-label">Il Programma</span>
+      <h2 class="section-title">Molto più<br><span class="italic">che sport</span></h2>
+      <p>Ogni giornata è pensata per far crescere i ragazzi fisicamente e mentalmente. Non ci annoiamo mai.</p>
+    </div>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <span class="activity-emoji">🤸‍♂️</span>
+        <h3>Parkour</h3>
+        <p>Il cuore del camp. Per esplorare, giocare e divertirsi con il proprio corpo. Si impara a saltare, cadere e volare — nel modo giusto.</p>
+        <span class="activity-tag">Ogni giorno</span>
+      </div>
+      <div class="activity-card">
+        <span class="activity-emoji">🥋</span>
+        <h3>Capoeira</h3>
+        <p>Arte marziale brasiliana che mescola danza, musica e movimento. Creatività, ritmo e rispetto. Un linguaggio universale.</p>
+        <span class="activity-tag">Ogni giorno</span>
+      </div>
+      <div class="activity-card">
+        <span class="activity-emoji">🇬🇧</span>
+        <h3>Inglese</h3>
+        <p>Perché la crescita è a 360 gradi. Lezioni interattive pensate per chi impara facendo, non studiando da un libro.</p>
+        <span class="activity-tag">Crescita mentale</span>
+      </div>
+      <div class="activity-card">
+        <span class="activity-emoji">📚</span>
+        <h3>Aiuto Compiti</h3>
+        <p>Alleniamo il corpo per liberare la mente. Supporto pomeridiano per arrivare a settembre senza pensieri arretrati.</p>
+        <span class="activity-tag">Supporto</span>
+      </div>
+      <div class="activity-card">
+        <span class="activity-emoji">✨</span>
+        <h3>Altre attività</h3>
+        <p>Oltre alle discipline principali, ogni settimana proponiamo giochi di squadra, laboratori creativi, momenti all’aperto e piccole sfide per tenere alta la curiosità — sempre nel segno del divertimento e del rispetto.</p>
+        <span class="activity-tag">In rotazione</span>
+      </div>
+      <div class="activity-card">
+        <span class="activity-emoji">🏰</span>
+        <h3>Gita a Gradara</h3>
+        <p>Una vera e propria missione fuori porta! Il borgo medievale di Gradara diventa il palcoscenico di un'avventura che i ragazzi non dimenticheranno.</p>
+        <span class="activity-tag activity-tag--highlight">Inclusa nel prezzo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── VS ─── -->
+<section class="vs">
+  <div class="max-w">
+    <div style="text-align:center; margin-bottom: 3.5rem;">
+      <h2 class="section-title">Un nuovo modo di<br><span class="italic">vivere l'estate</span></h2>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-col trad">
+        <h3>Centro estivo tradizionale</h3>
+        <div class="vs-item"><span class="icon">❌</span><span>Sempre gli stessi giochi, sempre le stesse attività.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>La performance definisce il tuo valore. Chi non tiene il passo viene lasciato indietro.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>Focus ossessivo sull'intrattenimento passivo.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>Abilità che finiscono con l'estate — inutili nella vita.</span></div>
+      </div>
+      <div class="vs-divider"><div class="vs-badge">VS</div></div>
+      <div class="vs-col xplore">
+        <h3>🦕 Filosofia Xplore</h3>
+        <div class="vs-item"><span class="icon">✅</span><span>Ogni giorno un'avventura diversa: parkour, capoeira, natura, inglese, gite.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>La tua crescita è la nostra missione. La sfida è con te stesso, non con gli altri.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>Sviluppi strumenti reali: problem solving, gestione della paura, fiducia in sé.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>Impari a risolvere problemi, ad adattarti, a non arrenderti. Per sempre.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TESTIMONIALS ─── -->
+<section class="testimonials">
+  <div class="max-w">
+    <div class="test-intro">
+      <span class="section-label">Dicono di noi</span>
+      <h2 class="section-title">Non fidarti<br><span class="italic">solo di noi</span></h2>
+      <p>Ecco cosa dicono i genitori dei nostri giovani esploratori.</p>
+    </div>
+    <div class="test-carousel-wrap">
+      <p class="test-carousel-hint test-carousel-hint--desktop">Usa le frecce per sfogliare le recensioni</p>
+      <p class="test-carousel-hint test-carousel-hint--mobile">Scorri con il dito — le recensioni cambiano anche da sole</p>
+      <div class="test-carousel">
+        <button type="button" class="test-carousel-btn test-carousel-btn--prev" aria-controls="testCarouselViewport" aria-label="Recensione precedente"><span aria-hidden="true">‹</span></button>
+        <div
+          class="test-carousel-viewport"
+          id="testCarouselViewport"
+          tabindex="0"
+          role="region"
+          aria-roledescription="carosello"
+          aria-label="Recensioni dei genitori"
+        >
+          <article class="test-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">Gli esercizi e il lavoro di squadra sono stati incredibili. Mio figlio si è rafforzato sia mentalmente che fisicamente.</p>
+            <p class="test-author">— Genitore</p>
+          </article>
+          <article class="test-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">Il metodo educativo e la sensibilità degli istruttori ci hanno colpito. È stato stimolante a livello fisico, mentale e sociale. Nostro figlio ha acquisito più sicurezza in sé stesso e non vede l'ora di continuare.</p>
+            <p class="test-author">— Genitore</p>
+          </article>
+          <article class="test-card">
+            <div class="test-stars">★★★★★</div>
+            <p class="test-text">Abbiamo trovato un ambiente divertente, accogliente e professionale. XPLORE è stato educativo, liberatorio e divertente: un percorso che consigliamo a tutti i genitori che vogliono far crescere i propri figli in armonia.</p>
+            <p class="test-author">— Genitore</p>
+          </article>
+        </div>
+        <button type="button" class="test-carousel-btn test-carousel-btn--next" aria-controls="testCarouselViewport" aria-label="Recensione successiva"><span aria-hidden="true">›</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PREZZI ─── -->
+<section class="prezzi" id="prezzi">
+  <div class="max-w">
+    <h2 class="section-title">Formule e Prezzi</h2>
+    <p class="prezzi-subtitle">Trasparenza totale. Nessuna sorpresa. Scegli il pacchetto più adatto alla tua estate.</p>
+    <div class="prezzi-grid">
+      <div class="price-card">
+        <div class="price-label">Ingressi Singoli</div>
+        <div class="price-number">100€</div>
+        <span class="price-tag">5 ingressi</span>
+        <p class="price-desc">Perfetto per iniziare e capire se fa per voi. Cinque sessioni da usare con flessibilità.</p>
+        <a href="#prenota" class="price-cta">Scegli questo →</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-best">Più scelto</div>
+        <div class="price-label">🗓️ Una settimana intera</div>
+        <div class="price-number">85€</div>
+        <span class="price-tag" style="background:rgba(255,255,255,.1); color:rgba(255,255,255,.6);">Settimanale</span>
+        <p class="price-desc">La formula più popolare. Un'intera settimana di avventura con tutti i tuoi nuovi compagni eroi.</p>
+        <a href="#prenota" class="price-cta">Scegli questo →</a>
+      </div>
+      <div class="price-card">
+        <div class="price-label">🏆 L'avventura completa</div>
+        <div class="price-number">300€</div>
+        <span class="price-tag">4 Settimane — Mensile</span>
+        <p class="price-desc">Il massimo livello. Un mese di trasformazione, crescita e amicizie che durano una vita.</p>
+        <a href="#prenota" class="price-cta">Scegli questo →</a>
+      </div>
+    </div>
+    <div class="inclusi-wrapper">
+      <div class="inclusi-col yes">
+        <h4>✅ Cosa è incluso</h4>
+        <ul>
+          <li><span class="check">✓</span> Tutte le sessioni di Parkour</li>
+          <li><span class="check">✓</span> Lezioni di Capoeira</li>
+          <li><span class="check">✓</span> Inglese interattivo</li>
+          <li><span class="check">✓</span> Aiuto compiti</li>
+          <li><span class="check">✓</span> Gita a Gradara (inclusa!)</li>
+          <li><span class="check">✓</span> Materiali e attrezzatura</li>
+        </ul>
+      </div>
+      <div class="inclusi-col no">
+        <h4>❌ Cosa NON è incluso</h4>
+        <ul>
+          <li><span class="cross">✗</span> Quota d'iscrizione associazione</li>
+          <li><span class="cross">✗</span> Pranzo quotidiano</li>
+          <li><span class="cross">✗</span> Trasporti giornalieri</li>
+          <li><span class="cross">✗</span> Gite extra (non quella a Gradara)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SICUREZZA / DOVE (mappa + Google Maps) ─── -->
+<section class="sicurezza" id="dove">
+  <div class="max-w">
+    <div class="sicurezza-intro">
+      <h2 class="section-title section-title--sicurezza">Dove ci troviamo</h2>
+    </div>
+    <div class="sicurezza-grid">
+      <div class="sicurezza-map-wrap">
+        <iframe title="Mappa — Xplore Parkour Rimini" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=12.599%2C44.0372%2C12.6132%2C44.0426&amp;layer=mapnik&amp;marker=44.039884%2C12.606263"></iframe>
+        <p class="sicurezza-map-attrib">Mappa © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · per navigazione e scheda del luogo usa Google Maps</p>
+      </div>
+      <div class="sicurezza-loc-panel">
+        <p class="staff-intro"><strong class="text-accent">Xplore Parkour Rimini</strong> — qui si tiene il centro estivo. Indirizzo, foto e indicazioni stradali aggiornate sono sulla scheda Google Maps: un tap e apri navigazione satellitare o i mezzi consigliati.</p>
+        <a href="https://maps.app.goo.gl/pMb5XBZeG8oz8Loq7" class="btn-dark" target="_blank" rel="noopener noreferrer">Apri Google Maps</a>
+        <p class="sicurezza-loc-hint">Vuoi vedere la sede prima dell’iscrizione? Su Google Maps trovi percorso, recensioni e tutti i dettagli del posto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="final-cta" id="prenota">
+  <span class="section-label">Ultimi posti disponibili</span>
+  <h2 class="section-title">Unisciti alla<br>Community</h2>
+  <p>I tuoi limiti di oggi sono il riscaldamento di domani.<br>Il prossimo salto potrebbe essere il tuo.</p>
+  <a href="mailto:info@xploreparkour.it" class="btn-dark">🦕 Iscrivi tuo figlio ora</a>
+  <p class="final-cta-note">Scrivici a <strong>info@xploreparkour.it</strong> oppure chiamaci direttamente. Ti risponderemo entro 24 ore.</p>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="logo">XPLORE <span>PARKOUR</span></div>
+  <p>📍 Parco Sandro Pertini, Rimini &nbsp;|&nbsp; 📅 15 Giugno – 31 Luglio 2026</p>
+  <p style="font-size:.75rem; color:rgba(0,0,0,.38);">© 2026 Xplore Parkour. Tutti i diritti riservati.</p>
+</footer>
+
+<script>
+(function () {
+  var vp = document.getElementById('testCarouselViewport');
+  if (!vp) return;
+  var prev = document.querySelector('.test-carousel-btn--prev');
+  var next = document.querySelector('.test-carousel-btn--next');
+  var mqMobile = window.matchMedia('(max-width: 768px)');
+  var autoInterval = null;
+  var resumeTimer = null;
+  var AUTO_DELAY_MS = 5500;
+  var PAUSE_AFTER_TOUCH_MS = 14000;
+
+  function maxScroll() {
+    return Math.max(0, vp.scrollWidth - vp.clientWidth);
+  }
+  function updateButtons() {
+    var max = maxScroll();
+    var left = vp.scrollLeft;
+    if (prev) prev.disabled = left <= 1;
+    if (next) next.disabled = left >= max - 1;
+  }
+  function go(delta) {
+    vp.scrollBy({ left: delta * vp.clientWidth, behavior: 'smooth' });
+  }
+  function advanceAuto() {
+    if (!mqMobile.matches) return;
+    var max = maxScroll();
+    var w = vp.clientWidth;
+    if (w <= 0) return;
+    if (vp.scrollLeft >= max - 2) {
+      vp.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      vp.scrollBy({ left: w, behavior: 'smooth' });
+    }
+  }
+  function stopAuto() {
+    if (autoInterval) {
+      clearInterval(autoInterval);
+      autoInterval = null;
+    }
+  }
+  function scheduleResumeAuto() {
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(startAuto, PAUSE_AFTER_TOUCH_MS);
+  }
+  function startAuto() {
+    stopAuto();
+    clearTimeout(resumeTimer);
+    resumeTimer = null;
+    if (!mqMobile.matches) return;
+    autoInterval = setInterval(advanceAuto, AUTO_DELAY_MS);
+  }
+  function onMobileInteract() {
+    if (!mqMobile.matches) return;
+    stopAuto();
+    scheduleResumeAuto();
+  }
+
+  if (prev) prev.addEventListener('click', function () { go(-1); });
+  if (next) next.addEventListener('click', function () { go(1); });
+  vp.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', function () {
+    updateButtons();
+    stopAuto();
+    clearTimeout(resumeTimer);
+    resumeTimer = null;
+    if (mqMobile.matches) startAuto();
+  });
+  vp.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      if (mqMobile.matches) onMobileInteract();
+      if (prev && !prev.disabled) go(-1);
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      if (mqMobile.matches) onMobileInteract();
+      if (next && !next.disabled) go(1);
+    }
+  });
+  vp.addEventListener('touchstart', onMobileInteract, { passive: true });
+
+  function onMqChange() {
+    stopAuto();
+    clearTimeout(resumeTimer);
+    resumeTimer = null;
+    updateButtons();
+    if (mqMobile.matches) startAuto();
+  }
+  if (mqMobile.addEventListener) {
+    mqMobile.addEventListener('change', onMqChange);
+  } else if (mqMobile.addListener) {
+    mqMobile.addListener(onMqChange);
+  }
+
+  updateButtons();
+  if (mqMobile.matches) startAuto();
+})();
+</script>
+
+</body>
+</html>

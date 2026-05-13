@@ -88,28 +88,32 @@
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
   body {
     background: var(--x-band-gray);
     color: var(--x-text-dark);
     font-family: var(--x-font);
     overflow-x: hidden;
-    line-height: 1.5;
+    line-height: 1.55;
+    font-size: 1rem;
   }
 
   /* ─── NAV ─── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1.2rem 4rem;
+    padding: clamp(0.85rem, 2.5vw, 1.2rem) clamp(1rem, 4vw, 4rem);
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
   .nav-logo {
     font-family: var(--x-font); font-weight: 800; letter-spacing: 0.02em;
-    font-size: 1.65rem;
+    font-size: clamp(1.15rem, 3.8vw, 1.65rem);
     letter-spacing: 0.06em;
     color: var(--x-accent);
     text-decoration: none;
@@ -133,8 +137,9 @@
   .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex; flex-direction: column; justify-content: center;
-    padding: 8rem 4rem 6rem;
+    padding: clamp(6.5rem, 14vw, 8rem) clamp(1.25rem, 4vw, 4rem) clamp(4rem, 10vw, 6rem);
     overflow: hidden;
     color: #ffffff;
   }
@@ -154,10 +159,10 @@
     font-family: var(--x-font);
     font-weight: 800;
     text-transform: uppercase;
-    font-size: clamp(2.75rem, 8vw, 6.5rem);
-    line-height: 1.5em;
-    letter-spacing: 3px;
-    margin-bottom: 1.2rem;
+    font-size: clamp(1.45rem, 5.8vw, 4rem);
+    line-height: 1.35em;
+    letter-spacing: clamp(0.5px, 0.35vw, 3px);
+    margin-bottom: 1rem;
     filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.85));
   }
   .hero h1 .yellow {
@@ -174,12 +179,12 @@
   }
   .hero-sub {
     position: relative; z-index: 1;
-    font-size: clamp(1.05rem, 2vw, 1.3rem);
-    color: rgba(255, 255, 255, 0.92);
-    max-width: 520px;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    font-weight: 400;
+    font-size: clamp(1rem, 2.4vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.94);
+    max-width: min(36rem, 100%);
+    line-height: 1.55;
+    margin-bottom: 2rem;
+    font-weight: 500;
     text-shadow: 0 1px 14px rgba(0, 0, 0, 0.85);
   }
   .hero-meta {
@@ -189,7 +194,8 @@
   }
   .hero-meta-item {
     display: flex; align-items: center; gap: .55rem;
-    font-size: .92rem; font-weight: 600; color: var(--x-text);
+    font-size: clamp(0.8rem, 2.2vw, 0.92rem);
+    font-weight: 600; color: var(--x-text);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
@@ -257,28 +263,35 @@
   }
 
   /* ─── SECTION BASE ─── */
-  section { padding: 6rem 4rem; }
+  section {
+    padding: clamp(3.25rem, 7vw, 6rem) clamp(1.25rem, 4vw, 4rem);
+  }
   .section-label {
     display: inline-block;
-    font-size: var(--wp--preset--font-size--small);
-    font-weight: 700; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--x-accent);
-    margin-bottom: 1rem;
+    font-size: clamp(0.68rem, 1.6vw, 0.8125rem);
+    font-weight: 700;
+    letter-spacing: clamp(2px, 0.45vw, 3px);
+    text-transform: uppercase;
+    color: var(--x-accent);
+    margin-bottom: 0.75rem;
+    line-height: 1.35;
   }
   .section-title {
-    font-family: var(--x-font); font-weight: 800; letter-spacing: 0.04em;
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    line-height: .95;
+    font-family: var(--x-font);
+    font-weight: 800;
+    letter-spacing: clamp(1px, 0.25vw, 2px);
+    font-size: clamp(1.85rem, 5vw, 4.15rem);
+    line-height: 1.1;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--x-text-dark);
   }
   .section-title .italic {
     font-family: var(--x-font);
     font-style: italic;
     font-weight: 700;
-    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    font-size: clamp(1.5rem, 4.2vw, 3.15rem);
+    line-height: 1.12;
   }
   .max-w { max-width: 1200px; margin: 0 auto; }
 
@@ -297,10 +310,10 @@
     margin: 0 auto;
   }
   .mission-text .lead {
-    font-size: clamp(1.1rem, 2.2vw, 1.35rem);
-    line-height: 1.7;
-    color: rgba(26, 26, 26, 0.82);
-    margin-bottom: 1.8rem;
+    font-size: clamp(1rem, 2.4vw, 1.28rem);
+    line-height: 1.68;
+    color: rgba(26, 26, 26, 0.84);
+    margin-bottom: 1.5rem;
   }
   .mission-text .lead strong { color: var(--x-accent); font-weight: 700; }
   .mission-pillars {
@@ -317,8 +330,8 @@
   }
   .pillar:hover { background: rgba(251, 192, 0, 0.16); }
   .pillar-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: .1rem; }
-  .pillar h4 { font-size: 1rem; font-weight: 700; margin-bottom: .2rem; color: #1a1a1a; }
-  .pillar p { font-size: .9rem; color: rgba(26, 26, 26, 0.68); line-height: 1.5; }
+  .pillar h4 { font-size: clamp(0.95rem, 2.2vw, 1.05rem); font-weight: 700; margin-bottom: .35rem; color: #1a1a1a; line-height: 1.25; }
+  .pillar p { font-size: clamp(0.88rem, 2vw, 0.94rem); color: rgba(26, 26, 26, 0.7); line-height: 1.58; }
 
   /* ─── PROGRAMMA (fascia bianca + blocchi chiari) ─── */
   .programma {
@@ -337,18 +350,19 @@
   }
   .programma-intro {
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 4rem;
+    max-width: min(700px, 100%);
+    margin: 0 auto clamp(2.5rem, 6vw, 4rem);
   }
   .programma-intro p {
-    color: rgba(26, 26, 26, 0.68);
-    font-size: 1.1rem;
+    color: rgba(26, 26, 26, 0.7);
+    font-size: clamp(1rem, 2.3vw, 1.1rem);
     line-height: 1.65;
   }
   .programma-intro .programma-schedule {
-    margin-top: 1.15rem;
+    margin-top: 1rem;
     color: rgba(26, 26, 26, 0.78);
-    font-size: 1.05rem;
+    font-size: clamp(0.98rem, 2.2vw, 1.05rem);
+    line-height: 1.55;
   }
   .programma-intro .programma-schedule strong {
     color: var(--x-accent);
@@ -365,7 +379,7 @@
   }
   .programma .activity-card {
     background: var(--x-band-white);
-    padding: 2.4rem 2rem;
+    padding: clamp(1.75rem, 4vw, 2.4rem) clamp(1.25rem, 3vw, 2rem);
     transition: background .25s;
     position: relative;
     overflow: hidden;
@@ -383,18 +397,19 @@
     background: #f4f4f4;
   }
   .programma .activity-card:hover::after { transform: scaleX(1); }
-  .programma .activity-emoji { font-size: 2.5rem; margin-bottom: 1.2rem; display: block; }
+  .programma .activity-emoji { font-size: clamp(2rem, 5vw, 2.5rem); margin-bottom: 1rem; display: block; }
   .programma .activity-card h3 {
     font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
-    font-size: 1.8rem;
+    font-size: clamp(1.35rem, 3.8vw, 1.75rem);
     letter-spacing: 1px;
     color: var(--x-accent);
-    margin-bottom: .6rem;
+    margin-bottom: .55rem;
+    line-height: 1.15;
   }
   .programma .activity-card p {
-    font-size: .95rem;
-    color: rgba(26, 26, 26, 0.72);
-    line-height: 1.6;
+    font-size: clamp(0.9rem, 2.2vw, 0.96rem);
+    color: rgba(26, 26, 26, 0.74);
+    line-height: 1.62;
   }
   /* ─── ISTRUTTORI (bianco, card come programma) ─── */
   .istruttori {
@@ -404,8 +419,8 @@
   }
   .istruttori-intro {
     text-align: center;
-    max-width: 640px;
-    margin: 0 auto 3.25rem;
+    max-width: min(640px, 100%);
+    margin: 0 auto clamp(2.25rem, 5vw, 3.25rem);
   }
   .istruttori .section-label {
     color: var(--wp--preset--color--luminous-vivid-orange);
@@ -417,10 +432,10 @@
     color: #242424;
   }
   .istruttori-sub {
-    margin-top: 1rem;
-    font-size: 1.05rem;
-    color: rgba(26, 26, 26, 0.62);
-    line-height: 1.65;
+    margin-top: 0.85rem;
+    font-size: clamp(0.98rem, 2.3vw, 1.05rem);
+    color: rgba(26, 26, 26, 0.64);
+    line-height: 1.62;
   }
   .istruttori-grid {
     display: grid;
@@ -477,22 +492,22 @@
     border-radius: 2px;
   }
   .instr-body {
-    padding: 1.65rem 1.75rem 1.85rem;
+    padding: clamp(1.35rem, 3.5vw, 1.65rem) clamp(1.2rem, 3vw, 1.75rem) clamp(1.5rem, 3.5vw, 1.85rem);
   }
   .instr-name {
     font-family: var(--x-font);
     font-weight: 900;
     letter-spacing: 1px;
-    font-size: 1.55rem;
+    font-size: clamp(1.28rem, 3.5vw, 1.55rem);
     color: var(--x-accent);
     margin-bottom: .5rem;
     line-height: 1.15;
   }
   .instr-role {
-    font-size: .93rem;
+    font-size: clamp(0.88rem, 2.1vw, 0.93rem);
     color: rgba(26, 26, 26, 0.76);
     line-height: 1.55;
-    margin-bottom: 1rem;
+    margin-bottom: 0.85rem;
   }
   .instr-tags {
     display: flex;
@@ -532,10 +547,12 @@
   .prezzi .section-label { color: var(--wp--preset--color--luminous-vivid-orange); }
   .prezzi .section-title { color: var(--x-text-dark); }
   .prezzi-subtitle {
-    font-size: 1.05rem;
-    color: rgba(26, 26, 26, 0.62);
-    margin-bottom: 3.5rem;
-    max-width: 600px;
+    font-size: clamp(0.98rem, 2.3vw, 1.05rem);
+    color: rgba(26, 26, 26, 0.64);
+    margin: 0 auto clamp(2.25rem, 5vw, 3.5rem);
+    max-width: min(600px, 100%);
+    line-height: 1.6;
+    text-align: center;
   }
   .prezzi-grid {
     display: grid;
@@ -546,7 +563,7 @@
   .price-card {
     background: var(--wp--preset--color--white);
     border-radius: 4px;
-    padding: 2.4rem 2rem;
+    padding: clamp(1.5rem, 4vw, 2.4rem) clamp(1.2rem, 3.5vw, 2rem);
     border: 2px solid transparent;
     transition: all .25s;
     position: relative;
@@ -581,7 +598,7 @@
   .price-card.featured .price-label { color: var(--x-accent); }
   .price-number {
     font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
-    font-size: 4.5rem;
+    font-size: clamp(2.65rem, 11vw, 4.5rem);
     line-height: 1;
     color: var(--x-text-dark);
     margin-bottom: .3rem;
@@ -597,9 +614,9 @@
     font-weight: 600;
   }
   .price-desc {
-    font-size: .92rem;
+    font-size: clamp(0.88rem, 2.1vw, 0.92rem);
     color: rgba(17,17,17,.6);
-    line-height: 1.5;
+    line-height: 1.58;
     margin-bottom: 1.8rem;
   }
   .price-cta {
@@ -637,26 +654,28 @@
 
   /* incluso / non incluso */
   .inclusi-wrapper {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 3vw, 2rem);
     background: var(--wp--preset--color--white);
     border-radius: 4px;
-    padding: 2.5rem;
+    padding: clamp(1.35rem, 3.5vw, 2.5rem);
     border: 1px solid rgba(0,0,0,.08);
   }
   .inclusi-col h4 {
     font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
-    font-size: 1.5rem;
+    font-size: clamp(1.12rem, 3.2vw, 1.5rem);
     letter-spacing: 1px;
-    margin-bottom: 1.2rem;
+    margin-bottom: clamp(0.85rem, 2vw, 1.2rem);
+    line-height: 1.2;
     display: flex; align-items: center; gap: .5rem;
   }
   .inclusi-col.yes h4 { color: var(--xplore-green); }
   .inclusi-col.no h4 { color: var(--wp--preset--color--vivid-red); }
   .inclusi-col ul { list-style: none; }
   .inclusi-col ul li {
-    font-size: .95rem;
+    font-size: clamp(0.88rem, 2vw, 0.95rem);
     color: rgba(17,17,17,.75);
-    padding: .55rem 0;
+    line-height: 1.45;
+    padding: .5rem 0;
     border-bottom: 1px solid rgba(0,0,0,.06);
     display: flex; align-items: center; gap: .7rem;
   }
@@ -796,14 +815,44 @@
     margin: 0;
   }
 
-  /* ─── TESTIMONIALS (bianco, prima dei prezzi) ─── */
+  /* ─── TESTIMONIALS (sfondo foto sfocata + overlay leggibilità) ─── */
   .testimonials {
-    background: var(--x-band-white);
+    position: relative;
+    overflow: hidden;
     color: var(--x-text-dark);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
+    background: var(--x-band-white);
+    isolation: isolate;
   }
-  .test-intro { text-align: center; max-width: 600px; margin: 0 auto 2.5rem; }
-  .test-intro p { color: rgba(26, 26, 26, 0.62); font-size: 1.05rem; line-height: 1.6; }
+  .testimonials::before {
+    content: '';
+    position: absolute;
+    inset: -12px;
+    z-index: 0;
+    background: url('/assets/testimonials-bg.png') center / cover no-repeat;
+    filter: blur(5px);
+    transform: scale(1.03);
+    pointer-events: none;
+  }
+  .testimonials::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.72) 0%,
+      rgba(248, 249, 251, 0.78) 45%,
+      rgba(255, 255, 255, 0.74) 100%
+    );
+    pointer-events: none;
+  }
+  .testimonials .max-w {
+    position: relative;
+    z-index: 2;
+  }
+  .test-intro { text-align: center; max-width: min(600px, 100%); margin: 0 auto clamp(2rem, 5vw, 2.5rem); }
+  .test-intro p { color: rgba(26, 26, 26, 0.64); font-size: clamp(0.98rem, 2.2vw, 1.05rem); line-height: 1.62; }
 
   .test-carousel-wrap {
     max-width: 800px;
@@ -883,7 +932,7 @@
   .test-card {
     background: var(--x-band-gray);
     border-radius: 4px;
-    padding: 1.5rem 1.5rem 1.35rem;
+    padding: clamp(1.15rem, 3.5vw, 1.5rem) clamp(1.1rem, 3vw, 1.5rem) clamp(1.1rem, 3vw, 1.35rem);
     border: 1px solid rgba(0, 0, 0, 0.08);
     position: relative;
     transition: border-color 0.25s, box-shadow 0.25s;
@@ -897,10 +946,10 @@
     font-family: var(--x-font);
     font-style: italic;
     font-weight: 500;
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: rgba(26, 26, 26, 0.85);
-    margin-bottom: 1.5rem;
+    font-size: clamp(0.98rem, 2.4vw, 1.06rem);
+    line-height: 1.62;
+    color: rgba(26, 26, 26, 0.86);
+    margin-bottom: 1.35rem;
   }
   .test-text::before { content: '"'; color: var(--x-accent); }
   .test-text::after { content: '"'; color: var(--x-accent); }
@@ -912,9 +961,9 @@
 
   /* ─── FINAL CTA ─── */
   .final-cta {
-    background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange);
-    color: var(--x-ink);
-    padding: 6rem 4rem;
+    background: #000000;
+    color: #ffffff;
+    padding: clamp(3.5rem, 10vw, 6rem) clamp(1.25rem, 5vw, 4rem);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -924,24 +973,21 @@
     position: absolute;
     font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
     font-size: 18vw;
-    color: rgba(0,0,0,.05);
+    color: rgba(255, 255, 255, 0.05);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     white-space: nowrap;
     pointer-events: none;
   }
-  .final-cta .section-label { color: rgba(0,0,0,.5); }
-  .final-cta .section-title { color: var(--x-ink); margin-bottom: 1rem; }
-  .final-cta p { font-size: 1.1rem; color: rgba(0,0,0,.65); max-width: 550px; margin: 0 auto 2.5rem; line-height: 1.65; }
   .btn-dark {
     background: #2f353c;
     color: #ffffff;
     font-family: var(--x-font);
     font-weight: 800;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    padding: 1.1rem 2.8rem;
+    padding: clamp(0.95rem, 2.5vw, 1.1rem) clamp(1.25rem, 5vw, 2.8rem);
     border-radius: 2px;
     text-decoration: none;
     display: inline-block;
@@ -951,23 +997,41 @@
   }
   .btn-dark:hover { background: transparent; color: #2f353c; border-color: #2f353c; }
   .final-cta-note {
-    margin-top: 1.5rem;
-    font-size: .85rem;
-    color: rgba(0,0,0,.45);
+    margin-top: 0;
+    font-size: clamp(0.82rem, 2vw, 0.9rem);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.55;
+    max-width: min(36rem, 100%);
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
+    z-index: 1;
+  }
+  .final-cta-note a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .final-cta-note a:hover {
+    color: var(--xplore-primary);
   }
 
   /* ─── FOOTER ─── */
   footer {
     background: var(--x-footer-bg);
-    padding: 2.5rem 4rem;
+    padding: clamp(1.75rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 4rem);
     display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
   }
-  footer .logo { font-family: var(--x-font); font-weight: 900; letter-spacing: 1px; font-size: 1.5rem; color: var(--x-accent); }
+  footer .logo {
+    font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    color: var(--x-accent);
+  }
   footer .logo span { color: rgba(0, 0, 0, 0.45); }
-  footer p { font-size: .8rem; color: rgba(0, 0, 0, 0.5); }
+  footer p { font-size: clamp(0.75rem, 2vw, 0.8rem); line-height: 1.5; color: rgba(0, 0, 0, 0.5); }
 
   /* ─── VS (bianco, colonne a contrasto leggero) ─── */
   .vs {
@@ -976,22 +1040,25 @@
     border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
   .vs-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0; align-items: stretch; }
-  .vs-col { padding: 3rem 2.5rem; }
+  .vs-col { padding: clamp(1.75rem, 5vw, 3rem) clamp(1.25rem, 4vw, 2.5rem); }
   .vs-col.trad { background: var(--x-card-tint); }
   .vs-col.xplore { background: rgba(251, 192, 0, 0.1); }
   .vs-col h3 {
     font-family: var(--x-font); font-weight: 900; letter-spacing: 1px;
-    font-size: 1.4rem; letter-spacing: 2px;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+    font-size: clamp(1.12rem, 3.2vw, 1.4rem);
+    letter-spacing: clamp(1px, 0.35vw, 2px);
+    line-height: 1.2;
+    margin-bottom: clamp(1.25rem, 3vw, 2rem);
+    padding-bottom: 0.85rem;
     border-bottom: 2px solid;
   }
   .vs-col.trad h3 { color: rgba(0, 0, 0, 0.42); border-color: rgba(0, 0, 0, 0.1); }
   .vs-col.xplore h3 { color: #b88600; border-color: rgba(251, 192, 0, 0.45); }
   .vs-item {
     display: flex; align-items: flex-start; gap: .8rem;
-    margin-bottom: 1.4rem;
-    font-size: .95rem; line-height: 1.5;
+    margin-bottom: clamp(1rem, 2.5vw, 1.4rem);
+    font-size: clamp(0.88rem, 2.1vw, 0.95rem);
+    line-height: 1.55;
   }
   .vs-col.trad .vs-item { color: rgba(0, 0, 0, 0.58); }
   .vs-col.xplore .vs-item { color: rgba(26, 26, 26, 0.88); }
@@ -1024,6 +1091,24 @@
     .programma .activities-grid {
       grid-template-columns: 1fr;
     }
+    footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .prezzi-grid {
+      gap: 1rem;
+    }
+    .price-best {
+      top: 0.75rem;
+      right: 0.75rem;
+      font-size: 0.62rem;
+      padding: 0.25rem 0.55rem;
+    }
+    .sicurezza-map-wrap iframe {
+      height: min(280px, 62vw);
+    }
   }
   @media (max-width: 768px) {
     .test-carousel-btn {
@@ -1051,6 +1136,16 @@
     footer { padding: 2rem 1.5rem; }
     .test-carousel-viewport .test-card {
       min-height: clamp(220px, 48vh, 300px);
+    }
+    .prezzi-grid {
+      gap: 1.15rem;
+      margin-bottom: clamp(2rem, 5vw, 3.5rem);
+    }
+    .stat-block .num {
+      font-size: clamp(2.25rem, 9vw, 3rem);
+    }
+    .myth-q {
+      font-size: clamp(1.15rem, 4vw, 1.5rem);
     }
   }
 
@@ -1289,12 +1384,12 @@
         <div class="vs-item"><span class="icon">❌</span><span>Sempre gli stessi giochi, sempre le stesse attività.</span></div>
         <div class="vs-item"><span class="icon">❌</span><span>La performance definisce il tuo valore. Chi non tiene il passo viene lasciato indietro.</span></div>
         <div class="vs-item"><span class="icon">❌</span><span>Focus ossessivo sull'intrattenimento passivo.</span></div>
-        <div class="vs-item"><span class="icon">❌</span><span>Abilità che finiscono con l'estate — inutili nella vita.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>Abilità che finiscono con l'estate, inutili nella vita.</span></div>
       </div>
       <div class="vs-divider"><div class="vs-badge">VS</div></div>
       <div class="vs-col xplore">
         <h3>🦕 Filosofia Xplore</h3>
-        <div class="vs-item"><span class="icon">✅</span><span>Ogni giorno un'avventura diversa: parkour, capoeira, natura, inglese, gite.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>Ogni giorno un'avventura diversa: parkour, capoeira, natura e altre attività creative.</span></div>
         <div class="vs-item"><span class="icon">✅</span><span>La tua crescita è la nostra missione. La sfida è con te stesso, non con gli altri.</span></div>
         <div class="vs-item"><span class="icon">✅</span><span>Sviluppi strumenti reali: problem solving, gestione della paura, fiducia in sé.</span></div>
         <div class="vs-item"><span class="icon">✅</span><span>Impari a risolvere problemi, ad adattarti, a non arrenderti. Per sempre.</span></div>
@@ -1338,10 +1433,9 @@
         <ul>
           <li><span class="check">✓</span> Tutte le sessioni di Parkour</li>
           <li><span class="check">✓</span> Lezioni di Capoeira</li>
-          <li><span class="check">✓</span> Inglese interattivo</li>
+          <li><span class="check">✓</span> Tanto divertimento</li>
           <li><span class="check">✓</span> Aiuto compiti</li>
           <li><span class="check">✓</span> Gita a Gradara (inclusa!)</li>
-          <li><span class="check">✓</span> Materiali e attrezzatura</li>
         </ul>
       </div>
       <div class="inclusi-col no">
@@ -1379,11 +1473,7 @@
 
 <!-- ─── FINAL CTA ─── -->
 <section class="final-cta" id="prenota">
-  <span class="section-label">Ultimi posti disponibili</span>
-  <h2 class="section-title">Unisciti alla<br>Community</h2>
-  <p>I tuoi limiti di oggi sono il riscaldamento di domani.<br>Il prossimo salto potrebbe essere il tuo.</p>
-  <a href="mailto:info@xploreparkour.it" class="btn-dark">🦕 Iscrivi tuo figlio ora</a>
-  <p class="final-cta-note">Scrivici a <strong>info@xploreparkour.it</strong> oppure chiamaci direttamente. Ti risponderemo entro 24 ore.</p>
+  <p class="final-cta-note">Per maggiori informazioni, domande o dubbi scrivi a <a href="mailto:info@xploreparkour.it">info@xploreparkour.it</a> oppure contattaci direttamente su WhatsApp cliccando <a href="https://wa.me/393932790874?text=Ciao%2C%20vorrei%20delle%20informazioni%20sul%20centro%20estivo." target="_blank" rel="noopener noreferrer">QUI</a>.</p>
 </section>
 
 <!-- ─── FOOTER ─── -->

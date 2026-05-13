@@ -414,6 +414,131 @@
     color: #c73d74;
   }
 
+  /* ─── ISTRUTTORI (bianco, card come programma) ─── */
+  .istruttori {
+    background: var(--x-band-white);
+    color: var(--x-text-dark);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .istruttori-intro {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 3.25rem;
+  }
+  .istruttori .section-label {
+    color: var(--wp--preset--color--luminous-vivid-orange);
+  }
+  .istruttori .section-title {
+    color: var(--x-ink);
+  }
+  .istruttori .section-title .italic {
+    color: #242424;
+  }
+  .istruttori-sub {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    color: rgba(26, 26, 26, 0.62);
+    line-height: 1.65;
+  }
+  .istruttori-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    gap: 1.25rem;
+  }
+  .instr-card {
+    background: var(--x-band-gray);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color .25s, box-shadow .25s;
+  }
+  .instr-card:hover {
+    border-color: rgba(251, 192, 0, 0.45);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  }
+  .instr-img-wrap {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #dfe3e8;
+  }
+  .instr-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+  }
+  .instr-card:hover .instr-img-wrap img {
+    transform: scale(1.03);
+  }
+  .instr-img-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.42) 0%, transparent 48%);
+    pointer-events: none;
+  }
+  .instr-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    background: rgba(251, 192, 0, 0.96);
+    color: var(--x-ink);
+    font-family: var(--x-font);
+    font-weight: 800;
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: .38rem .75rem;
+    border-radius: 2px;
+  }
+  .instr-body {
+    padding: 1.65rem 1.75rem 1.85rem;
+  }
+  .instr-name {
+    font-family: var(--x-font);
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-size: 1.55rem;
+    color: var(--x-accent);
+    margin-bottom: .5rem;
+    line-height: 1.15;
+  }
+  .instr-role {
+    font-size: .93rem;
+    color: rgba(26, 26, 26, 0.76);
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+  .instr-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+  }
+  .instr-tag {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #8a6500;
+    background: rgba(251, 192, 0, 0.18);
+    padding: .28rem .65rem;
+    border-radius: 2px;
+  }
+  .instr-decor {
+    position: absolute;
+    bottom: .65rem;
+    right: .85rem;
+    font-family: var(--x-font);
+    font-weight: 900;
+    font-size: 3.75rem;
+    color: rgba(251, 192, 0, 0.14);
+    line-height: 1;
+    pointer-events: none;
+  }
+
   .text-accent { color: var(--x-accent); }
 
   /* ─── PREZZI (banda grigio chiaro, dopo bianco programma) ─── */
@@ -1028,6 +1153,75 @@
   </div>
 </section>
 
+<!-- ─── VS ─── -->
+<section class="vs">
+  <div class="max-w">
+    <div style="text-align:center; margin-bottom: 3.5rem;">
+      <h2 class="section-title">Un nuovo modo di<br><span class="italic">vivere l'estate</span></h2>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-col trad">
+        <h3>Centro estivo tradizionale</h3>
+        <div class="vs-item"><span class="icon">❌</span><span>Sempre gli stessi giochi, sempre le stesse attività.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>La performance definisce il tuo valore. Chi non tiene il passo viene lasciato indietro.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>Focus ossessivo sull'intrattenimento passivo.</span></div>
+        <div class="vs-item"><span class="icon">❌</span><span>Abilità che finiscono con l'estate — inutili nella vita.</span></div>
+      </div>
+      <div class="vs-divider"><div class="vs-badge">VS</div></div>
+      <div class="vs-col xplore">
+        <h3>🦕 Filosofia Xplore</h3>
+        <div class="vs-item"><span class="icon">✅</span><span>Ogni giorno un'avventura diversa: parkour, capoeira, natura, inglese, gite.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>La tua crescita è la nostra missione. La sfida è con te stesso, non con gli altri.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>Sviluppi strumenti reali: problem solving, gestione della paura, fiducia in sé.</span></div>
+        <div class="vs-item"><span class="icon">✅</span><span>Impari a risolvere problemi, ad adattarti, a non arrenderti. Per sempre.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ISTRUTTORI ─── -->
+<section class="istruttori" id="istruttori">
+  <div class="max-w">
+    <div class="istruttori-intro">
+      <span class="section-label">Il Team Xplore</span>
+      <h2 class="section-title">I tuoi<br><span class="italic">istruttori</span></h2>
+      <p class="istruttori-sub">Le persone che guideranno i ragazzi durante l'estate. Esperti, appassionati, sempre presenti.</p>
+    </div>
+    <div class="istruttori-grid">
+      <article class="instr-card">
+        <div class="instr-img-wrap">
+          <span class="instr-badge">🦕 Manager</span>
+          <img src="assets/istruttori-seba.png" alt="Seba — Manager Xplore Parkour Rimini" width="816" height="1020" loading="lazy" decoding="async">
+        </div>
+        <div class="instr-body">
+          <h3 class="instr-name">Seba</h3>
+          <p class="instr-role">Manager di Xplore Parkour Rimini</p>
+          <div class="instr-tags">
+            <span class="instr-tag">Gestione camp</span>
+          </div>
+        </div>
+        <span class="instr-decor" aria-hidden="true">01</span>
+      </article>
+      <article class="instr-card">
+        <div class="instr-img-wrap">
+          <span class="instr-badge">🤸‍♂️ Istruttore</span>
+          <img src="assets/istruttori-max.png" alt="Max — Istruttore Parkour e Capoeira" width="816" height="1020" loading="lazy" decoding="async">
+        </div>
+        <div class="instr-body">
+          <h3 class="instr-name">Max</h3>
+          <p class="instr-role">Istruttore di Parkour e Capoeira FIU</p>
+          <div class="instr-tags">
+            <span class="instr-tag">Parkour</span>
+            <span class="instr-tag">Capoeira FIU</span>
+            <span class="instr-tag">Rimini</span>
+          </div>
+        </div>
+        <span class="instr-decor" aria-hidden="true">02</span>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ─── PROGRAMMA ─── -->
 <section class="programma" id="programma">
   <div class="max-w">
@@ -1072,32 +1266,6 @@
         <h3>Gita a Gradara</h3>
         <p>Una vera e propria missione fuori porta! Il borgo medievale di Gradara diventa il palcoscenico di un'avventura che i ragazzi non dimenticheranno.</p>
         <span class="activity-tag activity-tag--highlight">Inclusa nel prezzo</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── VS ─── -->
-<section class="vs">
-  <div class="max-w">
-    <div style="text-align:center; margin-bottom: 3.5rem;">
-      <h2 class="section-title">Un nuovo modo di<br><span class="italic">vivere l'estate</span></h2>
-    </div>
-    <div class="vs-grid">
-      <div class="vs-col trad">
-        <h3>Centro estivo tradizionale</h3>
-        <div class="vs-item"><span class="icon">❌</span><span>Sempre gli stessi giochi, sempre le stesse attività.</span></div>
-        <div class="vs-item"><span class="icon">❌</span><span>La performance definisce il tuo valore. Chi non tiene il passo viene lasciato indietro.</span></div>
-        <div class="vs-item"><span class="icon">❌</span><span>Focus ossessivo sull'intrattenimento passivo.</span></div>
-        <div class="vs-item"><span class="icon">❌</span><span>Abilità che finiscono con l'estate — inutili nella vita.</span></div>
-      </div>
-      <div class="vs-divider"><div class="vs-badge">VS</div></div>
-      <div class="vs-col xplore">
-        <h3>🦕 Filosofia Xplore</h3>
-        <div class="vs-item"><span class="icon">✅</span><span>Ogni giorno un'avventura diversa: parkour, capoeira, natura, inglese, gite.</span></div>
-        <div class="vs-item"><span class="icon">✅</span><span>La tua crescita è la nostra missione. La sfida è con te stesso, non con gli altri.</span></div>
-        <div class="vs-item"><span class="icon">✅</span><span>Sviluppi strumenti reali: problem solving, gestione della paura, fiducia in sé.</span></div>
-        <div class="vs-item"><span class="icon">✅</span><span>Impari a risolvere problemi, ad adattarti, a non arrenderti. Per sempre.</span></div>
       </div>
     </div>
   </div>

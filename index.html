@@ -105,7 +105,7 @@
     padding-bottom: var(--sticky-cta-bottom-space);
   }
 
-  /* ─── Sticky CTA (basso, link da aggiungere dopo) ─── */
+  /* ─── Sticky CTA (basso) ─── */
   .sticky-cta-bar {
     position: fixed;
     left: 0;
@@ -149,6 +149,14 @@
   .sticky-cta-btn:focus-visible {
     outline: 2px solid var(--x-ink);
     outline-offset: 3px;
+  }
+  a.sticky-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   /* ─── NAV ─── */
@@ -1482,7 +1490,7 @@
         <div class="price-number">100€</div>
         <span class="price-tag">5 ingressi</span>
         <p class="price-desc">5 mattinate da utilizzare secondo disponibilità e regolamento interno.</p>
-        <a href="#prenota" class="price-cta">Scegli questo →</a>
+        <a href="https://forms.gle/zcy33Vo56k3rhU2H6" class="price-cta" target="_blank" rel="noopener noreferrer">Scegli questo →</a>
       </div>
       <div class="price-card featured">
         <div class="price-best">Più scelto</div>
@@ -1490,14 +1498,14 @@
         <div class="price-number">85€</div>
         <span class="price-tag" style="background:rgba(255,255,255,.1); color:rgba(255,255,255,.6);">Settimanale</span>
         <p class="price-desc">La formula più popolare. Un'intera settimana di avventura con tutti i tuoi nuovi compagni eroi.</p>
-        <a href="#prenota" class="price-cta">Scegli questo →</a>
+        <a href="https://forms.gle/zcy33Vo56k3rhU2H6" class="price-cta" target="_blank" rel="noopener noreferrer">Scegli questo →</a>
       </div>
       <div class="price-card">
         <div class="price-label">🏆 L'avventura completa</div>
         <div class="price-number">300€</div>
         <span class="price-tag">4 Settimane — Mensile</span>
         <p class="price-desc">Il massimo livello. Un mese di trasformazione, crescita e amicizie che durano una vita.</p>
-        <a href="#prenota" class="price-cta">Scegli questo →</a>
+        <a href="https://forms.gle/zcy33Vo56k3rhU2H6" class="price-cta" target="_blank" rel="noopener noreferrer">Scegli questo →</a>
       </div>
     </div>
     <div class="inclusi-wrapper">
@@ -1657,7 +1665,7 @@
 </script>
 
 <div class="sticky-cta-bar" role="region" aria-label="Iscrizione">
-  <button type="button" class="sticky-cta-btn">Iscriviti ora</button>
+  <a href="https://forms.gle/zcy33Vo56k3rhU2H6" class="sticky-cta-btn" target="_blank" rel="noopener noreferrer">Iscriviti ora</a>
 </div>
 
 </body>

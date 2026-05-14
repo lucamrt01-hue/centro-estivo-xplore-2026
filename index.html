@@ -594,14 +594,15 @@
     border-top: 1px solid rgba(0, 0, 0, 0.06);
   }
   .prezzi .section-label { color: var(--wp--preset--color--luminous-vivid-orange); }
-  .prezzi .section-title { color: var(--x-text-dark); }
-  .prezzi-subtitle {
-    font-size: clamp(0.98rem, 2.3vw, 1.05rem);
-    color: rgba(26, 26, 26, 0.64);
-    margin: 0 auto clamp(2.25rem, 5vw, 3.5rem);
-    max-width: min(600px, 100%);
-    line-height: 1.6;
+  .prezzi .section-title {
+    color: var(--x-text-dark);
+    text-transform: none;
+    letter-spacing: clamp(0.5px, 0.2vw, 2px);
     text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
   }
   .prezzi-grid {
     display: grid;
@@ -1081,6 +1082,23 @@
   }
   footer .logo span { color: rgba(0, 0, 0, 0.45); }
   footer p { font-size: clamp(0.75rem, 2vw, 0.8rem); line-height: 1.5; color: rgba(0, 0, 0, 0.5); }
+  footer .footer-legal {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: 52rem;
+    margin: 0.75rem auto 0;
+    font-size: clamp(0.68rem, 1.55vw, 0.78rem);
+    line-height: 1.58;
+    color: rgba(0, 0, 0, 0.52);
+    text-align: left;
+  }
+  footer .footer-copy {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: rgba(0, 0, 0, 0.38);
+  }
 
   /* ─── VS (bianco, colonne a contrasto leggero) ─── */
   .vs {
@@ -1149,12 +1167,6 @@
     .prezzi-grid {
       gap: 1rem;
     }
-    .price-best {
-      top: 0.75rem;
-      right: 0.75rem;
-      font-size: 0.62rem;
-      padding: 0.25rem 0.55rem;
-    }
     .sicurezza-map-wrap iframe {
       height: min(280px, 62vw);
     }
@@ -1171,6 +1183,19 @@
     }
     .test-carousel-hint--mobile {
       display: block;
+    }
+    .price-card.featured {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .price-card.featured .price-best {
+      position: static;
+      align-self: center;
+      margin: 0 auto 0.85rem;
+      width: max-content;
+      max-width: 100%;
+      text-align: center;
     }
   }
   @media (max-width: 900px) {
@@ -1362,7 +1387,7 @@
       <div class="activity-card">
         <span class="activity-emoji">📚</span>
         <h3>Aiuto Compiti</h3>
-        <p>Alleniamo il corpo per liberare la mente. Supporto pomeridiano per arrivare a settembre senza pensieri arretrati.</p>
+        <p>Alleniamo il corpo per liberare la mente. Durante il centro estivo non mancherà il tempo per lo studio e i compiti.</p>
       </div>
       <div class="activity-card">
         <span class="activity-emoji">✨</span>
@@ -1450,14 +1475,13 @@
 <!-- ─── PREZZI ─── -->
 <section class="prezzi" id="prezzi">
   <div class="max-w">
-    <h2 class="section-title">Formule e Prezzi</h2>
-    <p class="prezzi-subtitle">Trasparenza totale. Nessuna sorpresa. Scegli il pacchetto più adatto alla tua estate.</p>
+    <h2 class="section-title">Quota di partecipazione</h2>
     <div class="prezzi-grid">
       <div class="price-card">
-        <div class="price-label">Ingressi Singoli</div>
+        <div class="price-label">Pacchetto Flessibile</div>
         <div class="price-number">100€</div>
         <span class="price-tag">5 ingressi</span>
-        <p class="price-desc">Perfetto per iniziare e capire se fa per voi. Cinque sessioni da usare con flessibilità.</p>
+        <p class="price-desc">5 mattinate da utilizzare secondo disponibilità e regolamento interno.</p>
         <a href="#prenota" class="price-cta">Scegli questo →</a>
       </div>
       <div class="price-card featured">
@@ -1529,7 +1553,8 @@
 <footer>
   <div class="logo">XPLORE <span>PARKOUR</span></div>
   <p>📍 Parco Sandro Pertini, Rimini &nbsp;|&nbsp; 📅 15 Giugno – 31 Luglio 2026</p>
-  <p style="font-size:.75rem; color:rgba(0,0,0,.38);">© 2026 Xplore Parkour. Tutti i diritti riservati.</p>
+  <p class="footer-legal">Il Centro Estivo Xplore è organizzato da Xplore Parkour ASD. La partecipazione è riservata a soci/tesserati in regola con quota associativa, tesseramento, copertura assicurativa e documentazione richiesta. Le attività si svolgono secondo progetto organizzativo, regolamento interno e autorizzazioni previste. Il programma può subire variazioni per motivi organizzativi, meteo, sicurezza o numero di partecipanti.</p>
+  <p class="footer-copy">© 2026 Xplore Parkour. Tutti i diritti riservati.</p>
 </footer>
 
 <script>
